@@ -1,6 +1,6 @@
 # SPPageController
 
-<img align="left" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/preview-v1.0.0.png" width="400"/>
+<img align="left" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/preview-v1.0.0.png" width="350"/>
 
 ### About
 
