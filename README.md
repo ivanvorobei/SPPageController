@@ -29,12 +29,14 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-To integrate using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
+Once you have your Swift package set up, adding as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
-```ogdl
-https://github.com/ivanvorobei/SPPageController
+```swift
+dependencies: [
+    .package(url: "https://github.com/ivanvorobei/SPPageController.git", .upToNextMajor(from: "1.0.0"))
+]
 ```
 
 ### CocoaPods:
