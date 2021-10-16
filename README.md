@@ -15,6 +15,9 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
     <a href="https://opensource.ivanvorobei.by">
         <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
     </a>
+    <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg">
+    </a>
 </p>
 
 ## Navigate
