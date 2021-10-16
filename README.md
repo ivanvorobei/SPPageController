@@ -2,8 +2,12 @@
 
 <img align="left" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/preview-v1.0.0.png" width="400"/>
 
+### About
+
 Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller.
- Support parent layout margins, paging and scroll by index. Don't have bug with tranlation when rotate.
+ Support parent layout margins, paging and scroll by index. 
+ 
+Don't have bug with tranlation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
 
