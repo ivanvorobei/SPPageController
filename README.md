@@ -1,4 +1,4 @@
-# ProjectName
+# SPPageController
 
  Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller.
  Support parent layout margins, paging and scroll by index. Don't have bug with tranlation when rotate.
