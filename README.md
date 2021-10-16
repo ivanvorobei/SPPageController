@@ -27,9 +27,9 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 ## Installation
 
-<img align="right" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/spm-install-preview.png" width="520"/>
-
 Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.0 and higher.
+
+<img align="right" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/spm-install-preview.png" width="560"/>
 
 ### Swift Package Manager
 
