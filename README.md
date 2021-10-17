@@ -1,5 +1,5 @@
 <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.2.png" width="260"/>
+    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.2.png" width="270"/>
 </a>
 
 # SPPageController
@@ -13,7 +13,7 @@ Mimicrate to native `UIPageViewController`. Each page is new controller, it can 
     </a>
 </p>
 
-You can add any controllers like child. Don't have bug with translation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
+Don't have bug with translation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
 
