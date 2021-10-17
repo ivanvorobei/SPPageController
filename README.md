@@ -1,13 +1,15 @@
 # SPPageController
 
 <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.1.png" width="240"/>
+    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.1.png" width="260"/>
 </a>
 
 ### About
 
 Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller.
  Support parent layout margins, paging and scroll by index. 
+ 
+ For each page you can add any controllers, like `UICollectionViewController` or even `UINavigationController`.
  
  <p float="left">
     <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
