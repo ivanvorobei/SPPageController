@@ -1,14 +1,20 @@
-# SPPageController
-
 <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview.png" width="280"/>
+    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview.png" width="240"/>
 </a>
+
+# SPPageController
 
 ### About
 
 Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller.
  Support parent layout margins, paging and scroll by index. 
  
+ <p float="left">
+    <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg">
+    </a>
+</p>
+
 Don't have bug with tranlation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
@@ -16,9 +22,6 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 <p float="left">
     <a href="https://opensource.ivanvorobei.by">
         <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
-    </a>
-    <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg">
     </a>
 </p>
 
