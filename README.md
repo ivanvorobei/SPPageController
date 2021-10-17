@@ -1,5 +1,5 @@
 <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.3.png" width="270"/>
+    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.3.png" width="250"/>
 </a>
 
 # SPPageController
