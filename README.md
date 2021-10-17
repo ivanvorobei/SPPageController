@@ -13,7 +13,7 @@ Mimicrate to native `UIPageViewController`. Each page is new controller, it can 
     </a>
 </p>
 
-Don't have bug with translation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
+You can add any controllers like child. Don't have bug with translation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
 
