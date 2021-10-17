@@ -63,7 +63,6 @@
 			children = (
 				F43EFCEB2718726F0084C460 /* App */,
 				F43EFCEC271872730084C460 /* Controllers */,
-				F43EFCED271872780084C460 /* Models */,
 			);
 			path = "iOS Example";
 			sourceTree = "<group>";
@@ -85,13 +84,6 @@
 				F43EFCDB27186FEA0084C460 /* ViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F43EFCED271872780084C460 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F43EFCF1271873A00084C460 /* Frameworks */ = {
