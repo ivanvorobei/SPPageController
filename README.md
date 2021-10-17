@@ -6,8 +6,7 @@
 
 #### About
 
-Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller.
- Support parent layout margins, paging and scroll by index. 
+Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller. You can add any class of controllers like child. Support parent layout margins, paging and scroll by index. 
  
 <p float="left">
     <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
