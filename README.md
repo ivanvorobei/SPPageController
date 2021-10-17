@@ -1,6 +1,8 @@
 # SPPageController
 
-<img align="left" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/preview-v1.0.0.png" width="350"/>
+<a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
+    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview.png" width="280"/>
+</a>
 
 ### About
 
@@ -38,7 +40,7 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.0 and higher.
 
-<img align="right" src="https://github.com/ivanvorobei/SPPageController/blob/main/Assets/Readme/spm-install-preview.png" width="550"/>
+<img align="right" src="https://cdn.ivanvorobei.by/github/sppagecontroller/spm-install-preview.png" width="550"/>
 
 ### Swift Package Manager
 
