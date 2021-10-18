@@ -52,8 +52,9 @@ class ViewController: UIViewController {
             navigationController.view.preservesSuperviewLayoutMargins = true
             controllers.append(navigationController)
         }
+
+        let pageController = SPPageController(childControllers: controllers, system: .page)
         
-        let pageController = SPPageController(viewControllers: controllers)
         // Example of manage layout margins.
         //pageController.view.layoutMargins = .init(horizontal: 50, vertical: 0)
         present(pageController, animated: true, completion: nil)
