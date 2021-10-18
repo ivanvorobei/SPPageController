@@ -45,7 +45,7 @@ open class SPPageController: UIViewController, SPPageControllerInterface {
         switch system {
         case .page:
             containerController = SPPageNativeController(childControllers: childControllers)
-        case .collection:
+        case .scroll:
             containerController = SPPageCollectionController(childControllers: childControllers)
         }
         super.init(nibName: nil, bundle: nil)
