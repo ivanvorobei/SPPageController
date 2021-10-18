@@ -21,13 +21,7 @@
 
 import UIKit
 
-/**
- SPPageController: Mimicrate to native `UIPageViewController`.
- 
- Each page is new controller, it can be even navigation controller.
- Support layout margins, paging and scroll by index.
- */
-open class SPPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIAdaptivePresentationControllerDelegate {
+open class SPPageController: UIViewController, SPPageControllerInterface {
     
     // MARK: - Data
     
@@ -41,24 +35,20 @@ open class SPPageController: UICollectionViewController, UICollectionViewDelegat
      SPPageController: Allow or disable scroll by pages with gester.
      */
     open var allowScroll: Bool {
-        get { collectionView.isScrollEnabled }
-        set { collectionView.isScrollEnabled = newValue }
+        get { (containerController as! SPPageControllerInterface).allowScroll }
+        set { (containerController as! SPPageControllerInterface).allowScroll = newValue }
     }
     
     // MARK: - Init
     
-    public init(viewControllers: [UIViewController]) {
-        self.viewControllers = viewControllers
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = .zero
-        layout.minimumInteritemSpacing = .zero
-        layout.scrollDirection = .horizontal
-        super.init(collectionViewLayout: layout)
-        
-        for controller in viewControllers {
-            self.addChild(controller)
-            controller.didMove(toParent: self)
+    public init(childControllers: [UIViewController], system: SPPageControllerSystem) {
+        switch system {
+        case .page:
+            containerController = SPPageNativeController(childControllers: childControllers)
+        case .collection:
+            containerController = SPPageCollectionController(childControllers: childControllers)
         }
+        super.init(nibName: nil, bundle: nil)
     }
     
     public required init?(coder: NSCoder) {
@@ -70,91 +60,28 @@ open class SPPageController: UICollectionViewController, UICollectionViewDelegat
     open override func viewDidLoad() {
         super.viewDidLoad()
         presentationController?.delegate = self
-        collectionView.delaysContentTouches = false
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.layoutMargins = .zero
-        collectionView.preservesSuperviewLayoutMargins = true
-        collectionView.insetsLayoutMarginsFromSafeArea = false
-        collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.isPagingEnabled = true
-        collectionView.bounces = false
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(SPPageCollectionViewCell.self, forCellWithReuseIdentifier: SPPageCollectionViewCell.id)
+        
+        addChild(containerController)
+        view.addSubview(containerController.view)
+        containerController.didMove(toParent: self)
+        
+        containerController.view.preservesSuperviewLayoutMargins = true
+        containerController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            containerController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            containerController.view.leftAnchor.constraint(equalTo: view.leftAnchor),
+            containerController.view.rightAnchor.constraint(equalTo: view.rightAnchor),
+            containerController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     // MARK: - Actions
     
     open func safeScrollTo(index: Int, animated: Bool) {
-        if index > (viewControllers.count - 1) {
-            // Don't safe index.
-            return
-        }
-        collectionView.scrollToItem(at: .init(row: index, section: .zero), at: .centeredVertically, animated: animated)
-    }
-    
-    // MARK: - Layout
-    
-    private var cellLayoutMargins: UIEdgeInsets {
-        collectionView.layoutMargins
-    }
-    
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.visibleCells.forEach({ $0.contentView.layoutMargins = cellLayoutMargins })
-    }
-    
-    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        /*
-         Use it code for safe index when device rotated.
-         */
-        guard let collectionView = collectionView else { return }
-        let offset = collectionView.contentOffset
-        let width = collectionView.bounds.size.width
-        let index = round(offset.x / width)
-        let newOffset = CGPoint(x: index * size.width, y: offset.y)
-        coordinator.animate(alongsideTransition: { (context) in
-            collectionView.setContentOffset(newOffset, animated: true)
-        }, completion: nil)
-    }
-    
-    // MARK: - UICollectionViewDataSource
-    
-    open override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    open override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewControllers.count
-    }
-    
-    open override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SPPageCollectionViewCell.id, for: indexPath) as! SPPageCollectionViewCell
-        let controller = viewControllers[indexPath.row]
-        cell.setViewController(controller)
-        cell.contentView.layoutMargins = cellLayoutMargins
-        return cell
-    }
-    
-    // MARK: - UICollectionViewDelegateFlowLayout
-    
-    open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
+        (containerController as! SPPageControllerInterface).safeScrollTo(index: index, animated: animated)
     }
     
     // MARK: - Internal
     
-    /**
-     SPPageController: All controllers, which show in pages.
-     */
-    private var viewControllers: [UIViewController]
-    
-    // MARK: - UIAdaptivePresentationControllerDelegate
-    
-    public func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
-        return allowDismissWithGester
-    }
+    private var containerController: UIViewController
 }
-

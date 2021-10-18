@@ -14,7 +14,7 @@ Mimicrate to native `UIPageViewController`. Each page is new controller, it can 
     </a>
 </p>
 
-Don't have bug with translation when rotate like apple's `UIPageViewController`. Also you can scroll to any page programatically. If you need pages for inboarding, you can disable scroll by gester.
+You can scroll to any page programatically. If you need pages for onboarding, you can disable scroll by gester and disable swipe to dismiss.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
 
@@ -70,11 +70,13 @@ If you prefer not to use any of dependency managers, you can integrate manually.
 
 ## Usage
 
-`SPPageController` is simple container controller. You can create, pass child controllers which using like pages and simple present page controller as you need:
+`SPPageController` is simple container controller. Now available 2 system of paging - `.scroll` and `.native`. First using `UICollectionView` like basic view, its good work with content offset but not perfect when device rotated. Second using native `UIPageViewController`. You shoud choose which better for you. 
+
+Pass child controllers which using like pages and simple present page controller as you need:
 
 ```swift
-let controllers: [UIViewController] = []
-let pageController = SPPageController(viewControllers: controllers)
+let controllers: [UIViewController] = [// Here your controllers]
+let pageController = SPPageController(childControllers: controllers, system: .native)
 present(pageController, animated: true, completion: nil)
 ```
 
@@ -95,6 +97,12 @@ If you want scroll only programatically, disable scroll between pages by gester:
 
 ```swift
 pageController.allowScroll = false
+```
+
+For scroll by index call this function:
+
+```swift
+pageController.safeScrollTo(index: 3, animated: true)
 ```
 
 ### Dismiss
