@@ -34,8 +34,6 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
     - [Present](#usage)
     - [Scroll](#scroll)
     - [Dismiss](#dismiss)
-- [Сontribution](#сontribution)
-- [Other Projects](#other-projects)
 - [Russian Community](#russian-community)
 
 ## Installation
@@ -52,7 +50,7 @@ Once you have your Swift package set up, adding as a dependency is as easy as ad
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ivanvorobei/SPPageController.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/ivanvorobei/SPPageController", .upToNextMajor(from: "1.2.1"))
 ]
 ```
 
@@ -113,38 +111,20 @@ If need disable dismiss by gester (related for modal controllers), set flag to `
 pageController.allowDismissWithGester = false
 ```
 
-## Сontribution
-
-My English is very bad. You can see this once you read the documentation. I would really like to have clean and nice documentation. If you see gramatical errors and can help fix the Readme, please contact me hello@ivanvorobei.by or make a Pull Request. Thank you in advance!
-
-## Other Projects
-
-I love being helpful. Here I have provided a list of libraries that I keep up to date. For see `video previews` of libraries without install open [opensource.ivanvorobei.by](https://opensource.ivanvorobei.by) website.<br>
-I have libraries with native interface and managing permissions. Also available pack of useful extensions for boost your development process.
-
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
-    </a>
-        <a href="https://xcodeshop.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/xcode-shop.svg">
-    </a>
-</p>
-
 ## Russian Community
 
-Подписывайся в телеграмм-канал, если хочешь получать уведомления о новых туториалах.<br>
+Подписывайся в телеграм-канал, если хочешь получать уведомления о новых туториалах.<br>
 Со сложными и непонятными задачами помогут в чате.
 
 <p float="left">
-    <a href="https://tutorials.ivanvorobei.by/telegram/channel">
+    <a href="https://sparrowcode.by/telegram">
         <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/open-telegram-channel.svg">
     </a>
-    <a href="https://tutorials.ivanvorobei.by/telegram/chat">
+    <a href="https://sparrowcode.by/telegram/chat">
         <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
     </a>
 </p>
 
-Видео-туториалы выклыдываю на [YouTube](https://tutorials.ivanvorobei.by/youtube):
+Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
 
-[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://tutorials.ivanvorobei.by/youtube)
+[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://ivanvorobei.by/youtube)
