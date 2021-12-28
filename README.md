@@ -27,8 +27,6 @@ You can scroll to any page programatically. If you need pages for onboarding, yo
 
 Ready for use on iOS 12+.
 
-<img align="right" src="https://cdn.ivanvorobei.by/github/sppagecontroller/spm-install-preview.png" width="550"/>
-
 ### Swift Package Manager
 
 The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
