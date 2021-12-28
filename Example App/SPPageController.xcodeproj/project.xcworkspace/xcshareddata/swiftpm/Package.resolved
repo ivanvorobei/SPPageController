@@ -5,18 +5,18 @@
         "package": "NativeUIKit",
         "repositoryURL": "https://github.com/ivanvorobei/NativeUIKit",
         "state": {
-          "branch": "main",
-          "revision": "e0a5ddd86a3582f076f1b965ff5fb4b02df614b9",
-          "version": null
+          "branch": null,
+          "revision": "43970ecb00daf1b375b84cf8bb2b1955a4302573",
+          "version": "1.1.9"
         }
       },
       {
         "package": "SparrowKit",
         "repositoryURL": "https://github.com/ivanvorobei/SparrowKit",
         "state": {
-          "branch": "main",
-          "revision": "05f325925804f1a84e2b4b77d315a97c3bd60d20",
-          "version": null
+          "branch": null,
+          "revision": "ec897099ef182602e0fd8a231da8186a53853174",
+          "version": "3.4.6"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/ivanvorobei/SPDiffable",
         "state": {
           "branch": null,
-          "revision": "54451d09a46e61770a530e899199b8bfaae21917",
-          "version": "1.6.0"
+          "revision": "84e69c37fac575a46ed27e4dc95042903b5bf0cd",
+          "version": "2.2.0"
         }
       },
       {

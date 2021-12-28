@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name = 'SPPageController'
-  s.version = '1.2.1'
-  s.summary = 'Wrapper for native UIPageViewController. Has scroll and pages ways. Each page is a new controller. Handled layout margins of container.'
+  s.version = '1.3.0'
+  s.summary = 'Mimicrate to UIPageViewController. Has native system and scroll view paging. Support scroll to index page and support layout margins from container.'
   s.homepage = 'https://github.com/ivanvorobei/SPPageController'
   s.source = { :git => 'https://github.com/ivanvorobei/SPPageController.git', :tag => s.version }
   s.license = { :type => "MIT", :file => "LICENSE" }

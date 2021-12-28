@@ -1,28 +1,15 @@
-<a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-    <img align="left" src="https://cdn.ivanvorobei.by/github/sppagecontroller/example-app-preview-1.0.3.png" width="250"/>
-</a>
-
 # SPPageController
 
-#### About
+<p aligment="left">
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/paging.png?version=8" height="260"/>
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/safe-scroll.png?version=8" height="260"/>
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/layout-margins.png?version=8" height="260"/>
+</p>
+
 
 Mimicrate to native `UIPageViewController`. Each page is new controller, it can be even navigation controller. You can add any class of controllers like child. Support parent layout margins, paging and scroll by index. 
  
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by/sppagecontroller/preview">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg">
-    </a>
-</p>
-
 You can scroll to any page programatically. If you need pages for onboarding, you can disable scroll by gester and disable swipe to dismiss.
-
-If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
-
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
-    </a>
-</p>
 
 ## Navigate
 
@@ -38,7 +25,7 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 ## Installation
 
-Ready for use on iOS 12+. Works with Swift 5+. Required Xcode 12.0 and higher.
+Ready for use on iOS 12+.
 
 <img align="right" src="https://cdn.ivanvorobei.by/github/sppagecontroller/spm-install-preview.png" width="550"/>
 
@@ -50,13 +37,13 @@ Once you have your Swift package set up, adding as a dependency is as easy as ad
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ivanvorobei/SPPageController", .upToNextMajor(from: "1.2.1"))
+    .package(url: "https://github.com/ivanvorobei/SPPageController", .upToNextMajor(from: "1.3.0"))
 ]
 ```
 
 ### CocoaPods:
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager. For usage and installation instructions, visit their website. To integrate using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'SPPageController'
@@ -68,12 +55,13 @@ If you prefer not to use any of dependency managers, you can integrate manually.
 
 ## Usage
 
-`SPPageController` is simple container controller. Now available 2 system of paging - `.scroll` and `.native`. First using `UICollectionView` like basic view, its good work with content offset but not perfect when device rotated. Second using native `UIPageViewController`. You shoud choose which better for you. 
+`SPPageController` is container controller. Now available 2 system of paging - `.scroll` and `.native`. First using `UICollectionView` like basic view, its good work with content offset but not perfect when device rotated. Second using native `UIPageViewController`. You shoud choose which better for you. 
 
 Pass child controllers which using like pages and simple present page controller as you need:
 
 ```swift
-let controllers: [UIViewController] = [// Here your controllers]
+// Here your controllers
+let controllers: [UIViewController] = []
 let pageController = SPPageController(childControllers: controllers, system: .native)
 present(pageController, animated: true, completion: nil)
 ```
@@ -113,17 +101,8 @@ pageController.allowDismissWithGester = false
 
 ## Russian Community
 
-Подписывайся в телеграм-канал, если хочешь получать уведомления о новых туториалах.<br>
-Со сложными и непонятными задачами помогут в чате.
-
-<p float="left">
-    <a href="https://sparrowcode.by/telegram">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/open-telegram-channel.svg">
-    </a>
-    <a href="https://sparrowcode.by/telegram/chat">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
-    </a>
-</p>
+Я веду [телеграм-канал](https://sparrowcode.by/telegram), там публикую новости и туториалы.<br>
+С проблемой помогут [в чате](https://sparrowcode.by/telegram/chat).
 
 Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
 
