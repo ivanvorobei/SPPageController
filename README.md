@@ -1,9 +1,9 @@
 # SPPageController
 
 <p aligment="left">
-    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/paging.png?version=8" height="260"/>
-    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/safe-scroll.png?version=8" height="260"/>
-    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/layout-margins.png?version=8" height="260"/>
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/paging.png?version=8" height="200"/>
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/safe-scroll.png?version=8" height="200"/>
+    <img src="https://cdn.ivanvorobei.by/github/sppagecontroller/v1.3/layout-margins.png?version=8" height="200"/>
 </p>
 
 
