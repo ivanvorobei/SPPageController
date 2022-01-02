@@ -21,7 +21,7 @@
 
 import UIKit
 
-class SPPageCollectionController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class SPPageCollectionController: UICollectionViewController, UICollectionViewDelegateFlowLayout, SPPageControllerInterface {
     
     // MARK: - Init
     
@@ -61,22 +61,6 @@ class SPPageCollectionController: UICollectionViewController, UICollectionViewDe
         collectionView.register(SPPageCollectionViewCell.self, forCellWithReuseIdentifier: SPPageCollectionViewCell.id)
     }
     
-    // MARK: - Actions
-    
-    /**
-     SPPageController: Scroll to controller by `index`.
-     
-     - parameter index: Index of scrolling controller.
-     - parameter animated: Scroll to controller animated or not.
-     */
-    func safeScrollTo(index: Int, animated: Bool) {
-        if index > (childControllers.count - 1) {
-            // Don't safe index.
-            return
-        }
-        collectionView.scrollToItem(at: .init(row: index, section: .zero), at: .centeredVertically, animated: animated)
-    }
-    
     // MARK: - Layout
     
     private var cellLayoutMargins: UIEdgeInsets { collectionView.layoutMargins }
@@ -91,6 +75,21 @@ class SPPageCollectionController: UICollectionViewController, UICollectionViewDe
             layout.itemSize = collectionView.frame.size
             layout.invalidateLayout()
         }
+    }
+    
+    // MARK: - SPPageControllerInterface
+    
+    var allowScroll: Bool {
+        get { collectionView.isScrollEnabled }
+        set { collectionView.isScrollEnabled = newValue }
+    }
+    
+    func safeScrollTo(index: Int, animated: Bool) {
+        if index > (childControllers.count - 1) {
+            // Don't safe index.
+            return
+        }
+        collectionView.scrollToItem(at: .init(row: index, section: .zero), at: .centeredVertically, animated: animated)
     }
     
     // MARK: - UICollectionViewDataSource
