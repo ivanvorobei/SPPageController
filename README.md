@@ -53,14 +53,14 @@ If you prefer not to use any of dependency managers, you can integrate manually.
 
 ## Usage
 
-`SPPageController` is container controller. Now available 2 system of paging - `.scroll` and `.native`. First using `UICollectionView` like basic view, its good work with content offset but not perfect when device rotated. Second using native `UIPageViewController`. You shoud choose which better for you. 
+`SPPageController` is container controller. Now available 2 system of paging - `.scroll` and `.page`. First using `UICollectionView` like basic view, its good work with content offset but not perfect when device rotated. Second using native `UIPageViewController`. You shoud choose which better for you. 
 
 Pass child controllers which using like pages and simple present page controller as you need:
 
 ```swift
 // Here your controllers
 let controllers: [UIViewController] = []
-let pageController = SPPageController(childControllers: controllers, system: .native)
+let pageController = SPPageController(childControllers: controllers, system: .page)
 present(pageController, animated: true, completion: nil)
 ```
 
