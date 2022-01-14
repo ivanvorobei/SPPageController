@@ -47,6 +47,7 @@ class SPPageNativeController: UIPageViewController, UIPageViewControllerDataSour
         
         for view in view.subviews {
             if let scrollView = view as? UIScrollView {
+                scrollView.delaysContentTouches = false
                 scrollView.preservesSuperviewLayoutMargins = true
             }
         }
