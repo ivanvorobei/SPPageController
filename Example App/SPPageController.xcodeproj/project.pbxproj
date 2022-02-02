@@ -17,13 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F40B20A127AAD3F8000B426F /* SPPageController */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SPPageController; path = ..; sourceTree = "<group>"; };
 		F43EFCD427186FEA0084C460 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EFCD727186FEA0084C460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43EFCDB27186FEA0084C460 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F43EFCE327186FEC0084C460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43EFCE527186FEC0084C460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43EFCEE271872A60084C460 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		F43EFCF0271872C20084C460 /* SPPageController */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPPageController; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 		F43EFCCB27186FEA0084C460 = {
 			isa = PBXGroup;
 			children = (
-				F43EFCF0271872C20084C460 /* SPPageController */,
+				F40B20A127AAD3F8000B426F /* SPPageController */,
 				F43EFCD627186FEA0084C460 /* iOS Example */,
 				F43EFCD527186FEA0084C460 /* Products */,
 				F43EFCF1271873A00084C460 /* Frameworks */,
