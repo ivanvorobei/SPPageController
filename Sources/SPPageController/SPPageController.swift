@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2021 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2021 Ivan Vorobei (hello@ivanvorobei.io)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -39,14 +39,20 @@ open class SPPageController: UIViewController, SPPageControllerInterface {
         set { (containerController as! SPPageControllerInterface).allowScroll = newValue }
     }
     
+    /**
+     SPPageController: Get Childs.
+     */
+    open var childControllers: [UIViewController] { storedChildControllers }
+    
     // MARK: - Init
     
     public init(childControllers: [UIViewController], system: SPPageControllerSystem) {
+        self.storedChildControllers = childControllers
         switch system {
         case .page:
-            containerController = SPPageNativeController(childControllers: childControllers)
+            containerController = SPPageNativeController(childControllers: storedChildControllers)
         case .scroll:
-            containerController = SPPageCollectionController(childControllers: childControllers)
+            containerController = SPPageCollectionController(childControllers: storedChildControllers)
         }
         super.init(nibName: nil, bundle: nil)
     }
@@ -84,4 +90,5 @@ open class SPPageController: UIViewController, SPPageControllerInterface {
     // MARK: - Internal
     
     private var containerController: UIViewController
+    private var storedChildControllers: [UIViewController]
 }
