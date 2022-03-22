@@ -26,3 +26,9 @@ public enum SPPageControllerSystem {
     case page
     case scroll
 }
+
+public enum SPPageControllerNavigationOrientation {
+    
+    case vertical
+    case horizontal
+}

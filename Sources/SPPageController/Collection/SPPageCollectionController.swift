@@ -25,12 +25,12 @@ class SPPageCollectionController: UICollectionViewController, UICollectionViewDe
     
     // MARK: - Init
     
-    init(childControllers: [UIViewController]) {
+    init(childControllers: [UIViewController], scrollDirection: UICollectionView.ScrollDirection = .horizontal) {
         self.childControllers = childControllers
         let layout = SPPageCollectionViewFlowLayout()
         layout.minimumLineSpacing = .zero
         layout.minimumInteritemSpacing = .zero
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = scrollDirection
         super.init(collectionViewLayout: layout)
         
         for controller in childControllers {
