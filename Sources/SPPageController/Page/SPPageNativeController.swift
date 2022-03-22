@@ -25,9 +25,9 @@ class SPPageNativeController: UIPageViewController, UIPageViewControllerDataSour
     
     // MARK: - Init
     
-    init(childControllers: [UIViewController]) {
+    init(childControllers: [UIViewController], navigationOrientation: UIPageViewController.NavigationOrientation = .horizontal) {
         self.childControllers = childControllers
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [:])
+        super.init(transitionStyle: .scroll, navigationOrientation: navigationOrientation, options: [:])
         guard let firstController = self.childControllers.first else { return }
         setViewControllers([firstController], direction: SPPageNativeController.direction, animated: false, completion: nil)
     }

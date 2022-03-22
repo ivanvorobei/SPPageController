@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             controllers.append(navigationController)
         }
 
-        let pageController = SPPageController(childControllers: controllers, system: .page)
+        let pageController = SPPageController(childControllers: controllers, navigationOrientation: .horizontal, system: .page)
         
         // Example of manage layout margins.
         //pageController.view.layoutMargins = .init(horizontal: 50, vertical: 0)
