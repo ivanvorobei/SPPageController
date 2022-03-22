@@ -46,13 +46,15 @@ open class SPPageController: UIViewController, SPPageControllerInterface {
     
     // MARK: - Init
     
-    public init(childControllers: [UIViewController], system: SPPageControllerSystem) {
+    public init(childControllers: [UIViewController], navigationOrientation: SPPageControllerNavigationOrientation = .horizontal, system: SPPageControllerSystem) {
         self.storedChildControllers = childControllers
         switch system {
         case .page:
-            containerController = SPPageNativeController(childControllers: storedChildControllers)
+            let orientation: UIPageViewController.NavigationOrientation = navigationOrientation == .horizontal ? .horizontal : .vertical
+            containerController = SPPageNativeController(childControllers: storedChildControllers, navigationOrientation: orientation)
         case .scroll:
-            containerController = SPPageCollectionController(childControllers: storedChildControllers)
+            let direction: UICollectionView.ScrollDirection = navigationOrientation == .horizontal ? .horizontal: .vertical
+            containerController = SPPageCollectionController(childControllers: storedChildControllers, scrollDirection: direction)
         }
         super.init(nibName: nil, bundle: nil)
     }
